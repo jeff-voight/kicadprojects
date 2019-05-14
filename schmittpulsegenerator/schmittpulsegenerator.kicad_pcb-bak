@@ -227,7 +227,7 @@
 
   (module fiducial:Fiducial_2mm_Cross (layer F.Cu) (tedit 5CD9EF2A) (tstamp 5CD9FEEE)
     (at 111.506 112.776)
-    (fp_text reference REF** (at -3.048 0) (layer F.SilkS)
+    (fp_text reference REF** (at -3.048 0) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value Fiducial_2mm_Cross (at 0 1.3) (layer F.Fab)
@@ -244,7 +244,7 @@
 
   (module fiducial:Fiducial_2mm_Cross (layer F.Cu) (tedit 5CD9EF2A) (tstamp 5CD9FEE2)
     (at 71.12 112.776)
-    (fp_text reference REF** (at 3.048 0.254) (layer F.SilkS)
+    (fp_text reference REF** (at 3.048 0.254) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value Fiducial_2mm_Cross (at 0 1.3) (layer F.Fab)
@@ -261,7 +261,7 @@
 
   (module fiducial:Fiducial_2mm_Cross (layer F.Cu) (tedit 5CD9EF2A) (tstamp 5CD9FED6)
     (at 111.506 87.864)
-    (fp_text reference REF** (at 0 -2.54) (layer F.SilkS)
+    (fp_text reference REF** (at 0 -2.54) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value Fiducial_2mm_Cross (at 8.382 -1.25) (layer F.Fab)
@@ -278,7 +278,7 @@
 
   (module fiducial:Fiducial_2mm_Cross (layer F.Cu) (tedit 5CD9EF2A) (tstamp 5CD9FEB5)
     (at 71.374 87.884)
-    (fp_text reference REF** (at 0 -2.54) (layer F.SilkS)
+    (fp_text reference REF** (at 0 -2.54) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value Fiducial_2mm_Cross (at 0 1.3) (layer F.Fab)
