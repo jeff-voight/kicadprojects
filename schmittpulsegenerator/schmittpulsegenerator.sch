@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:schmittpulsegenerator-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -13,17 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L power:+5V #PWR02
-U 1 1 5CD0D67B
-P 3700 2600
-F 0 "#PWR02" H 3700 2450 50  0001 C CNN
-F 1 "+5V" H 3715 2773 50  0000 C CNN
-F 2 "" H 3700 2600 50  0001 C CNN
-F 3 "" H 3700 2600 50  0001 C CNN
-	1    3700 2600
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR03
 U 1 1 5CD0DD36
@@ -242,8 +232,6 @@ Wire Wire Line
 Wire Wire Line
 	3600 2700 3700 2700
 Connection ~ 3700 2700
-Wire Wire Line
-	3700 2700 3700 2600
 $Comp
 L power:GND #PWR04
 U 1 1 5CD2815F
@@ -311,11 +299,11 @@ Wire Wire Line
 	6600 4300 6600 4850
 Connection ~ 6600 4300
 Text Notes 7450 7500 0    50   ~ 0
-Schmitt Trigger TDR
+Schmitt Trigger TDR with Battery
 Text Notes 8200 7650 0    50   ~ 0
-6 May 2019
+14 May 2019
 Text Notes 10650 7650 0    50   ~ 0
-0.1
+2.0
 $Comp
 L Connector:Conn_01x02_Male J2
 U 1 1 5CD5A694
@@ -327,8 +315,60 @@ F 3 "~" H 3700 4650 50  0001 C CNN
 	1    3700 4650
 	1    0    0    -1  
 $EndComp
-Text GLabel 3900 4650 2    50   Input ~ 0
-+5V
 Text GLabel 3900 4750 2    50   Input ~ 0
+GND
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5CDB0003
+P 2800 4100
+F 0 "BT1" H 2918 4196 50  0000 L CNN
+F 1 "Battery_Cell" H 2918 4105 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_106_1x20mm" V 2800 4160 50  0001 C CNN
+F 3 "~" V 2800 4160 50  0001 C CNN
+	1    2800 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR0101
+U 1 1 5CDB0C85
+P 2800 3700
+F 0 "#PWR0101" H 2800 3550 50  0001 C CNN
+F 1 "+BATT" H 2815 3873 50  0000 C CNN
+F 2 "" H 2800 3700 50  0001 C CNN
+F 3 "" H 2800 3700 50  0001 C CNN
+	1    2800 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:-BATT #PWR0102
+U 1 1 5CDB163B
+P 2800 4400
+F 0 "#PWR0102" H 2800 4250 50  0001 C CNN
+F 1 "-BATT" H 2815 4573 50  0000 C CNN
+F 2 "" H 2800 4400 50  0001 C CNN
+F 3 "" H 2800 4400 50  0001 C CNN
+	1    2800 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2800 3900 2800 3700
+Wire Wire Line
+	2800 4400 2800 4200
+$Comp
+L power:+BATT #PWR0103
+U 1 1 5CDB2FB5
+P 3700 2550
+F 0 "#PWR0103" H 3700 2400 50  0001 C CNN
+F 1 "+BATT" H 3715 2723 50  0000 C CNN
+F 2 "" H 3700 2550 50  0001 C CNN
+F 3 "" H 3700 2550 50  0001 C CNN
+	1    3700 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3700 2550 3700 2700
+Text GLabel 3900 4650 2    50   Input ~ 0
++BATT
+Text GLabel 2800 4350 2    50   Input ~ 0
 GND
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-15938713798300726
+15940271731127574
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -44141,13 +44141,6 @@ fiducial
 0
 1
 0
-fiducial
-Fiducial_2mm_Cross
-
-
-0
-1
-1
 Filter
 Filter_1109-5_1.1x0.9mm
 5-pin SAW filter package - 1.1x0.9 mm Body; (see https://www.murata.com/~/media/webrenewal/support/library/catalog/products/filter/rf/p73e.ashx?la=en-gb)
@@ -48026,6 +48019,20 @@ solder jumper open
 0
 5
 3
+kicad footprint libraries
+Fiducial_0.5mm_Mask1.5mm
+Circular Fiducial, 0.5mm bare copper, 1.5mm soldermask opening
+fiducial
+0
+1
+0
+kicad footprint libraries
+Fiducial_2mm_Cross
+
+
+0
+2
+1
 LED_SMD
 LED-APA102-2020
 http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf
