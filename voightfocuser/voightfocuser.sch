@@ -1,0 +1,166 @@
+EESchema Schematic File Version 4
+LIBS:voightfocuser-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Barrel_Jack J?
+U 1 1 5CDACD81
+P 800 1050
+F 0 "J?" H 857 1375 50  0000 C CNN
+F 1 "Barrel_Jack" H 857 1284 50  0000 C CNN
+F 2 "" H 850 1010 50  0001 C CNN
+F 3 "~" H 850 1010 50  0001 C CNN
+	1    800  1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_B_Micro J?
+U 1 1 5CDAD9A2
+P 800 2600
+F 0 "J?" H 857 3067 50  0000 C CNN
+F 1 "USB_B_Micro" H 857 2976 50  0000 C CNN
+F 2 "" H 950 2550 50  0001 C CNN
+F 3 "~" H 950 2550 50  0001 C CNN
+	1    800  2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Microchip_ATmega:ATmega32U2-AU U?
+U 1 1 5CDAFB2F
+P 4800 4800
+F 0 "U?" H 4800 3311 50  0000 C CNN
+F 1 "ATmega32U2-AU" H 4800 3220 50  0000 C CNN
+F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 4800 4800 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc7799.pdf" H 4800 4800 50  0001 C CNN
+	1    4800 4800
+	1    0    0    -1  
+$EndComp
+Text GLabel 1900 1300 2    50   UnSpc ~ 0
+GNDA
+Text GLabel 1100 1150 2    50   UnSpc ~ 0
+GNDA
+Text GLabel 850  3000 2    50   UnSpc ~ 0
+GND
+Wire Wire Line
+	800  3000 850  3000
+Text GLabel 4900 6250 2    50   UnSpc ~ 0
+GND
+Wire Wire Line
+	4800 6200 4800 6250
+Wire Wire Line
+	4800 6250 4900 6250
+Wire Wire Line
+	4700 6200 4700 6250
+Wire Wire Line
+	4700 6250 4800 6250
+Connection ~ 4800 6250
+Text GLabel 2500 950  2    50   UnSpc ~ 0
+VCC
+Text GLabel 4950 3250 2    50   UnSpc ~ 0
+VCC
+Wire Wire Line
+	4700 3400 4700 3250
+Wire Wire Line
+	4800 3400 4800 3250
+Wire Wire Line
+	4700 3250 4800 3250
+Connection ~ 4800 3250
+Wire Wire Line
+	4800 3250 4900 3250
+Wire Wire Line
+	4900 3400 4900 3250
+Connection ~ 4900 3250
+Wire Wire Line
+	4900 3250 4950 3250
+Wire Wire Line
+	4700 3250 4100 3250
+Wire Wire Line
+	4100 3250 4100 3700
+Connection ~ 4700 3250
+$Comp
+L Regulator_Linear:AMS1117-5.0 U?
+U 1 1 5CDB919F
+P 1850 950
+F 0 "U?" H 1850 1192 50  0000 C CNN
+F 1 "AMS1117-5.0" H 1850 1101 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 1850 1150 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 1950 700 50  0001 C CNN
+	1    1850 950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 950  1550 950 
+Wire Wire Line
+	1850 1250 1850 1300
+Wire Wire Line
+	1850 1300 1900 1300
+Wire Wire Line
+	2150 950  2500 950 
+$Comp
+L Interface_USB:FT230XS U?
+U 1 1 5CDD7FDC
+P 1850 4750
+F 0 "U?" H 1850 5631 50  0000 C CNN
+F 1 "FT230XS" H 1850 5540 50  0000 C CNN
+F 2 "Package_SO:SSOP-16_3.9x4.9mm_P0.635mm" H 2300 4100 50  0001 C CNN
+F 3 "http://www.ftdichip.com/Products/ICs/FT230X.html" H 1850 4750 50  0001 C CNN
+	1    1850 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_Motor:DRV8848 U?
+U 1 1 5CDD91C7
+P 5400 1650
+F 0 "U?" H 5400 2431 50  0000 C CNN
+F 1 "DRV8848" H 5400 2340 50  0000 C CNN
+F 2 "Package_SO:TSSOP-16-1EP_4.4x5mm_P0.65mm" H 5400 950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/drv8848.pdf" H 4250 3000 50  0001 C CNN
+	1    5400 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Temperature:LM75B U?
+U 1 1 5CDDA185
+P 1850 6550
+F 0 "U?" H 1850 7231 50  0000 C CNN
+F 1 "LM75B" H 1850 7140 50  0000 C CNN
+F 2 "" H 1850 6550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm75b.pdf" H 1850 6550 50  0001 C CNN
+	1    1850 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW?
+U 1 1 5CDDCFA9
+P 8800 1550
+F 0 "SW?" H 8800 1917 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 8800 1826 50  0000 C CNN
+F 2 "" H 8650 1710 50  0001 C CNN
+F 3 "~" H 8800 1810 50  0001 C CNN
+	1    8800 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Rotary12 SW?
+U 1 1 5CDE06CE
+P 9750 3100
+F 0 "SW?" H 9650 3881 50  0000 C CNN
+F 1 "SW_Rotary12" H 9650 3790 50  0000 C CNN
+F 2 "" H 9550 3800 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/C200/DS-Serie%23LOR.pdf" H 9550 3800 50  0001 C CNN
+	1    9750 3100
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
