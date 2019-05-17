@@ -29,8 +29,8 @@ $Comp
 L Connector:USB_B_Micro J?
 U 1 1 5CDAD9A2
 P 800 2600
-F 0 "J?" H 857 3067 50  0000 C CNN
-F 1 "USB_B_Micro" H 857 2976 50  0000 C CNN
+F 0 "J?" H 650 3050 50  0000 C CNN
+F 1 "USB_B_Micro" H 850 2950 50  0000 C CNN
 F 2 "" H 950 2550 50  0001 C CNN
 F 3 "~" H 950 2550 50  0001 C CNN
 	1    800  2600
@@ -47,16 +47,8 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc7799.pdf" H 4800 4800 50
 	1    4800 4800
 	1    0    0    -1  
 $EndComp
-Text GLabel 1900 1300 2    50   UnSpc ~ 0
-GNDA
-Text GLabel 1100 1150 2    50   UnSpc ~ 0
-GNDA
-Text GLabel 850  3000 2    50   UnSpc ~ 0
-GND
 Wire Wire Line
 	800  3000 850  3000
-Text GLabel 4900 6250 2    50   UnSpc ~ 0
-GND
 Wire Wire Line
 	4800 6200 4800 6250
 Wire Wire Line
@@ -84,11 +76,6 @@ Wire Wire Line
 Connection ~ 4900 3250
 Wire Wire Line
 	4900 3250 4950 3250
-Wire Wire Line
-	4700 3250 4100 3250
-Wire Wire Line
-	4100 3250 4100 3700
-Connection ~ 4700 3250
 $Comp
 L Regulator_Linear:AMS1117-5.0 U?
 U 1 1 5CDB919F
@@ -112,22 +99,11 @@ $Comp
 L Interface_USB:FT230XS U?
 U 1 1 5CDD7FDC
 P 1850 4750
-F 0 "U?" H 1850 5631 50  0000 C CNN
-F 1 "FT230XS" H 1850 5540 50  0000 C CNN
+F 0 "U?" H 2100 5450 50  0000 C CNN
+F 1 "FT230XS" H 2200 5350 50  0000 C CNN
 F 2 "Package_SO:SSOP-16_3.9x4.9mm_P0.635mm" H 2300 4100 50  0001 C CNN
 F 3 "http://www.ftdichip.com/Products/ICs/FT230X.html" H 1850 4750 50  0001 C CNN
 	1    1850 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Driver_Motor:DRV8848 U?
-U 1 1 5CDD91C7
-P 5400 1650
-F 0 "U?" H 5400 2431 50  0000 C CNN
-F 1 "DRV8848" H 5400 2340 50  0000 C CNN
-F 2 "Package_SO:TSSOP-16-1EP_4.4x5mm_P0.65mm" H 5400 950 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/drv8848.pdf" H 4250 3000 50  0001 C CNN
-	1    5400 1650
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -144,12 +120,12 @@ $EndComp
 $Comp
 L Device:Rotary_Encoder_Switch SW?
 U 1 1 5CDDCFA9
-P 8800 1550
-F 0 "SW?" H 8800 1917 50  0000 C CNN
-F 1 "Rotary_Encoder_Switch" H 8800 1826 50  0000 C CNN
-F 2 "" H 8650 1710 50  0001 C CNN
-F 3 "~" H 8800 1810 50  0001 C CNN
-	1    8800 1550
+P 6700 5300
+F 0 "SW?" H 6700 5667 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 6700 5576 50  0000 C CNN
+F 2 "" H 6550 5460 50  0001 C CNN
+F 3 "~" H 6700 5560 50  0001 C CNN
+	1    6700 5300
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -163,4 +139,54 @@ F 3 "http://cdn-reichelt.de/documents/datenblatt/C200/DS-Serie%23LOR.pdf" H 9550
 	1    9750 3100
 	1    0    0    -1  
 $EndComp
+$Comp
+L Motor:Stepper_Motor_bipolar M?
+U 1 1 5CDE265A
+P 6850 1500
+F 0 "M?" V 6818 1312 50  0000 R CNN
+F 1 "Stepper_Motor_bipolar" V 6727 1312 50  0000 R CNN
+F 2 "" H 6860 1490 50  0001 C CNN
+F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarStepperMotor_V1.1.pdf?fileId=db3a30431be39b97011be5d0aa0a00b0" H 6860 1490 50  0001 C CNN
+	1    6850 1500
+	0    -1   -1   0   
+$EndComp
+Text GLabel 1300 950  1    50   Input ~ 0
+VDD
+Text GLabel 5450 950  2    50   Input ~ 0
+VDD
+Text GLabel 1900 1300 2    50   Input ~ 0
+GNDC
+Text GLabel 1100 1150 2    50   Input ~ 0
+GNDD
+Text GLabel 850  3000 2    50   Input ~ 0
+GNDC
+Text GLabel 700  3000 3    50   Input ~ 0
+GNDC
+Text GLabel 1100 2400 2    50   Input ~ 0
+VCC
+Text GLabel 5450 2350 3    50   Input ~ 0
+GNDD
+Text GLabel 5550 2350 3    50   Input ~ 0
+GNDD
+Text GLabel 4900 6250 2    50   Input ~ 0
+GNDC
+Text GLabel 1850 7050 2    50   Input ~ 0
+GNDC
+Wire Wire Line
+	1750 5450 1950 5450
+Wire Wire Line
+	1950 5450 2050 5450
+Connection ~ 1950 5450
+Text GLabel 2050 5450 2    50   Input ~ 0
+GNDC
+Text GLabel 1750 4050 1    50   Input ~ 0
+VCC
+Text GLabel 1950 4050 1    50   Input ~ 0
+VCC
+Text GLabel 4100 3700 0    50   Input ~ 0
+~RESET
+Text GLabel 1150 4950 0    50   Input ~ 0
+~RESET
+Text Notes 7000 7050 0    354  ~ 0
+Voight Focuser
 $EndSCHEMATC
