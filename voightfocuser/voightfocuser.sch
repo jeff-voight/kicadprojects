@@ -152,8 +152,6 @@ F 3 "http://www.infineon.com/dgdl/Application-Note-TLE8110EE_driving_UniPolarSte
 $EndComp
 Text GLabel 1300 950  1    50   Input ~ 0
 VDD
-Text GLabel 5450 950  2    50   Input ~ 0
-VDD
 Text GLabel 1900 1300 2    50   Input ~ 0
 GNDC
 Text GLabel 1100 1150 2    50   Input ~ 0
@@ -164,10 +162,6 @@ Text GLabel 700  3000 3    50   Input ~ 0
 GNDC
 Text GLabel 1100 2400 2    50   Input ~ 0
 VCC
-Text GLabel 5450 2350 3    50   Input ~ 0
-GNDD
-Text GLabel 5550 2350 3    50   Input ~ 0
-GNDD
 Text GLabel 4900 6250 2    50   Input ~ 0
 GNDC
 Text GLabel 1850 7050 2    50   Input ~ 0
@@ -189,4 +183,23 @@ Text GLabel 1150 4950 0    50   Input ~ 0
 ~RESET
 Text Notes 7000 7050 0    354  ~ 0
 Voight Focuser
+$Comp
+L JeffLibrary:DRV8825 U?
+U 1 1 5CDE1BDD
+P 4650 1550
+F 0 "U?" H 4675 2425 50  0000 C CNN
+F 1 "DRV8825" H 4675 2334 50  0000 C CNN
+F 2 "Package_SO:HTSSOP-28-1EP_4.4x9.7mm_P0.65mm_EP3.4x9.5mm_Mask2.4x6.17mm_ThermalVias" H 4750 650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/drv8825.pdf" H 4500 2200 50  0001 C CNN
+	1    4650 1550
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	8800 2050 8800 4050
+Wire Notes Line
+	8800 4050 10450 4050
+Wire Notes Line
+	10450 4050 10450 2050
+Wire Notes Line
+	10450 2050 8800 2050
 $EndSCHEMATC
