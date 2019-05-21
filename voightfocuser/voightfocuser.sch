@@ -59,9 +59,9 @@ Wire Wire Line
 	4700 6250 4800 6250
 Connection ~ 4800 6250
 Text GLabel 2500 950  2    50   UnSpc ~ 0
-VCC
+VCC5+
 Text GLabel 4950 3250 2    50   UnSpc ~ 0
-VCC
+VCC3.3
 Wire Wire Line
 	4700 3400 4700 3250
 Wire Wire Line
@@ -81,7 +81,7 @@ L Regulator_Linear:AMS1117-5.0 U?
 U 1 1 5CDB919F
 P 1850 950
 F 0 "U?" H 1850 1192 50  0000 C CNN
-F 1 "AMS1117-5.0" H 1850 1101 50  0000 C CNN
+F 1 "AMS1117-3.3" H 1850 1101 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 1850 1150 50  0001 C CNN
 F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 1950 700 50  0001 C CNN
 	1    1850 950 
@@ -94,7 +94,7 @@ Wire Wire Line
 Wire Wire Line
 	1850 1300 1900 1300
 Wire Wire Line
-	2150 950  2500 950 
+	2150 950  2400 950 
 $Comp
 L Interface_USB:FT230XS U?
 U 1 1 5CDD7FDC
@@ -174,9 +174,7 @@ Connection ~ 1950 5450
 Text GLabel 2050 5450 2    50   Input ~ 0
 GNDC
 Text GLabel 1750 4050 1    50   Input ~ 0
-VCC
-Text GLabel 1950 4050 1    50   Input ~ 0
-VCC
+VCC3,3
 Text GLabel 4100 3700 0    50   Input ~ 0
 ~RESET
 Text GLabel 1150 4950 0    50   Input ~ 0
@@ -202,4 +200,83 @@ Wire Notes Line
 	10450 4050 10450 2050
 Wire Notes Line
 	10450 2050 8800 2050
+$Comp
+L Device:CP C?
+U 1 1 5CE22235
+P 2400 1200
+F 0 "C?" H 2518 1246 50  0000 L CNN
+F 1 "CP" H 2518 1155 50  0000 L CNN
+F 2 "" H 2438 1050 50  0001 C CNN
+F 3 "~" H 2400 1200 50  0001 C CNN
+	1    2400 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 1050 2400 950 
+Connection ~ 2400 950 
+Wire Wire Line
+	2400 950  2500 950 
+Text GLabel 2500 1500 2    50   Input ~ 0
+GNDC
+Wire Wire Line
+	2400 1350 2400 1500
+Wire Wire Line
+	2400 1500 2500 1500
+Wire Wire Line
+	1050 1150 1050 1300
+Wire Wire Line
+	1050 1300 1850 1300
+Connection ~ 1850 1300
+Text GLabel 1300 2600 2    50   Input ~ 0
+D+
+Text GLabel 1300 2700 2    50   Input ~ 0
+D-
+Wire Wire Line
+	1100 2600 1300 2600
+Wire Wire Line
+	1100 2700 1300 2700
+Text GLabel 5300 900  2    50   Input ~ 0
+GNDD
+Wire Wire Line
+	5100 900  5300 900 
+Text GLabel 2150 6000 2    50   Input ~ 0
+VCC3.3
+Wire Wire Line
+	1850 6050 1850 6000
+Wire Wire Line
+	1850 6000 2150 6000
+Text GLabel 1050 4750 0    50   Input ~ 0
+D+
+Text GLabel 1050 4650 0    50   Input ~ 0
+D-
+Wire Wire Line
+	1150 4650 1050 4650
+Wire Wire Line
+	1150 4750 1050 4750
+Text GLabel 2850 4350 2    50   Input ~ 0
+TXD
+Text GLabel 2650 4450 2    50   Input ~ 0
+RXD
+Text GLabel 2850 4550 2    50   Input ~ 0
+~RTS
+Text GLabel 2650 4650 2    50   Input ~ 0
+~CTS
+Wire Wire Line
+	2550 4350 2850 4350
+Wire Wire Line
+	2550 4450 2650 4450
+Wire Wire Line
+	2550 4550 2850 4550
+Wire Wire Line
+	2550 4650 2650 4650
+Wire Notes Line
+	1100 5750 2600 5750
+Wire Notes Line
+	2600 5750 2600 7150
+Wire Notes Line
+	2600 7150 1100 7150
+Wire Notes Line
+	1100 5750 1100 7150
+Text Notes 3150 5750 2    50   ~ 0
+Should be isolated from heat. Back of board on own ground plane.
 $EndSCHEMATC
