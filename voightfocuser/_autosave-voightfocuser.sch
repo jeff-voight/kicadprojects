@@ -58,17 +58,6 @@ Wire Wire Line
 Wire Wire Line
 	2200 3850 2450 3850
 $Comp
-L Sensor_Temperature:LM75B U?
-U 1 1 5CDDA185
-P 9750 1450
-F 0 "U?" H 9550 1700 50  0000 C CNN
-F 1 "LM75B" H 9900 1700 50  0000 C CNN
-F 2 "" H 9750 1450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lm75b.pdf" H 9750 1450 50  0001 C CNN
-	1    9750 1450
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:Rotary_Encoder_Switch SW?
 U 1 1 5CDDCFA9
 P 9900 5100
@@ -111,8 +100,6 @@ Text GLabel 700  5850 3    50   Input ~ 0
 GNDC
 Text GLabel 1100 5250 2    50   Input ~ 0
 VCC5+
-Text GLabel 9750 1950 2    50   Input ~ 0
-GNDC
 $Comp
 L JeffLibrary:DRV8825 U?
 U 1 1 5CDE1BDD
@@ -163,18 +150,6 @@ Text GLabel 5250 1000 2    50   Input ~ 0
 GNDD
 Wire Wire Line
 	5050 1000 5250 1000
-Text GLabel 10050 900  2    50   Input ~ 0
-VCC5+
-Wire Wire Line
-	9750 950  9750 900 
-Wire Wire Line
-	9750 900  10050 900 
-Wire Notes Line
-	9000 650  10500 650 
-Wire Notes Line
-	10500 650  10500 2050
-Wire Notes Line
-	9000 650  9000 2050
 Text Notes 9000 650  0    50   ~ 0
 Should be isolated from heat.\nBack of board on own ground plane.
 Text Notes 7000 7050 0    354  ~ 0
@@ -196,8 +171,6 @@ F 3 "http://www.ti.com/lit/ds/symlink/txb0104.pdf" H 5110 5895 50  0001 C CNN
 	1    5000 5800
 	1    0    0    -1  
 $EndComp
-Wire Notes Line
-	9000 2050 10500 2050
 $Comp
 L Interface_USB:FT230XS U?
 U 1 1 5CE6FD5E
@@ -694,21 +667,14 @@ Wire Wire Line
 Wire Wire Line
 	7100 5800 7150 5800
 $Comp
-L Device:C C?
-U 1 1 5CEAA16D
-P 9500 900
-F 0 "C?" V 9450 1000 50  0000 C CNN
-F 1 ".1uF" V 9550 1050 50  0000 C CNN
-F 2 "" H 9538 750 50  0001 C CNN
-F 3 "~" H 9500 900 50  0001 C CNN
-	1    9500 900 
-	0    1    1    0   
+L Sensor:DHT11 U?
+U 1 1 5CEBE678
+P 9650 1450
+F 0 "U?" H 9406 1496 50  0000 R CNN
+F 1 "DHT11" H 9406 1405 50  0000 R CNN
+F 2 "Sensor:Aosong_DHT11_5.5x12.0_P2.54mm" H 9650 1050 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" H 9800 1700 50  0001 C CNN
+	1    9650 1450
+	1    0    0    -1  
 $EndComp
-Text GLabel 9300 900  0    50   Input ~ 0
-GNDC
-Wire Wire Line
-	9300 900  9350 900 
-Wire Wire Line
-	9650 900  9750 900 
-Connection ~ 9750 900 
 $EndSCHEMATC
