@@ -1311,11 +1311,7 @@ MEDLOW
 Text GLabel 7450 4700 2    50   Input ~ 0
 MEDHIGH
 Wire Wire Line
-	1150 2450 1200 2450
-Wire Wire Line
 	1600 2450 1700 2450
-Wire Wire Line
-	1200 2450 1200 2350
 NoConn ~ 1200 4550
 NoConn ~ 1300 2350
 $Comp
@@ -1434,7 +1430,6 @@ Wire Wire Line
 	7400 4800 7450 4800
 Wire Wire Line
 	7400 5800 7450 5800
-NoConn ~ 1200 2550
 NoConn ~ 7400 4900
 Text GLabel 3800 6850 0    50   Input ~ 0
 GND
@@ -1442,6 +1437,10 @@ Wire Wire Line
 	3800 6850 3900 6850
 Text Label 1150 4150 0    50   ~ 0
 +5V
-Text Label 1300 2350 0    50   ~ 0
+Wire Wire Line
+	1150 2450 1150 2550
+Wire Wire Line
+	1150 2550 1200 2550
+Text Label 1150 2500 0    50   ~ 0
 +12V
 $EndSCHEMATC

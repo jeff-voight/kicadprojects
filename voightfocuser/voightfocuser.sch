@@ -65,7 +65,7 @@ GNDD
 Text GLabel 800  4750 3    50   Input ~ 0
 GND
 $Comp
-L JeffLibrary:DRV8825 U3
+L voightfocuser-rescue:DRV8825-JeffLibrary U3
 U 1 1 5CDE1BDD
 P 4600 1650
 F 0 "U3" H 4625 2525 50  0000 C CNN
