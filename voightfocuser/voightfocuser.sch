@@ -1256,18 +1256,7 @@ F 3 "~" H 1450 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 950  3500 0    50   Input ~ 0
-VCC
-$Comp
-L Device:R R1
-U 1 1 5D65848B
-P 1100 3500
-F 0 "R1" V 1000 3500 50  0000 C CNN
-F 1 "10k" V 1100 3500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1030 3500 50  0001 C CNN
-F 3 "~" H 1100 3500 50  0001 C CNN
-	1    1100 3500
-	0    1    1    0   
-$EndComp
+GND
 Text GLabel 1850 3500 2    50   Input ~ 0
 LIMIT
 Wire Wire Line
@@ -1325,17 +1314,13 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20w
 	1    6800 4900
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5500 7750 5650 7750
-Wire Wire Line
-	5500 7600 5650 7600
-Text GLabel 5500 7750 0    50   Input ~ 0
+Text GLabel 5500 7600 0    50   Input ~ 0
 TERMB
 Text GLabel 5650 7750 2    50   Input ~ 0
 INT1
 Text GLabel 5650 7600 2    50   Input ~ 0
 INT0
-Text GLabel 5500 7600 0    50   Input ~ 0
+Text GLabel 5500 7750 0    50   Input ~ 0
 TERMA
 Wire Wire Line
 	1700 2450 1750 2450
@@ -1443,4 +1428,14 @@ Wire Wire Line
 	1150 2550 1200 2550
 Text Label 1150 2500 0    50   ~ 0
 +12V
+Wire Wire Line
+	950  3500 1250 3500
+Text GLabel 7900 4250 1    50   Input ~ 0
+XTAL_N
+Text GLabel 7900 4450 3    50   Input ~ 0
+XTAL_P
+Wire Wire Line
+	5500 7600 5650 7600
+Wire Wire Line
+	5500 7750 5650 7750
 $EndSCHEMATC

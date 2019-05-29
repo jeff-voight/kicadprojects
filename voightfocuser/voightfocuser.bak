@@ -65,7 +65,7 @@ GNDD
 Text GLabel 800  4750 3    50   Input ~ 0
 GND
 $Comp
-L JeffLibrary:DRV8825 U3
+L voightfocuser-rescue:DRV8825-JeffLibrary U3
 U 1 1 5CDE1BDD
 P 4600 1650
 F 0 "U3" H 4625 2525 50  0000 C CNN
@@ -1256,18 +1256,7 @@ F 3 "~" H 1450 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 950  3500 0    50   Input ~ 0
-VCC
-$Comp
-L Device:R R1
-U 1 1 5D65848B
-P 1100 3500
-F 0 "R1" V 1000 3500 50  0000 C CNN
-F 1 "10k" V 1100 3500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1030 3500 50  0001 C CNN
-F 3 "~" H 1100 3500 50  0001 C CNN
-	1    1100 3500
-	0    1    1    0   
-$EndComp
+GND
 Text GLabel 1850 3500 2    50   Input ~ 0
 LIMIT
 Wire Wire Line
@@ -1443,4 +1432,10 @@ Wire Wire Line
 	1150 2550 1200 2550
 Text Label 1150 2500 0    50   ~ 0
 +12V
+Wire Wire Line
+	950  3500 1250 3500
+Text GLabel 7900 4250 1    50   Input ~ 0
+XTAL_N
+Text GLabel 7900 4450 3    50   Input ~ 0
+XTAL_P
 $EndSCHEMATC
